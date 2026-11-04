@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Full Range · Movimiento sin límites. Olmo Araiza Woolrich, practicante certificado del Método Hippensteel® (CPKE, Nivel 103), Ciudad de México. Recupera la vitalidad de tu cuerpo, vive sin dolor y haz los movimientos que amas.">
+<meta property="og:title" content="Full Range · Movimiento sin límites">
+<meta property="og:description" content="Recupera la vitalidad de tu cuerpo, vive sin dolor y haz los movimientos que amas.">
+<meta property="og:image" content="img/joe-mimi.jpg">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Full Range</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;1,800;1,900&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one long page. Wide ivory hero with a brushed enso and the wordmark, then alternating paper / navy bands, each with a narrow text column and a ruled grid. */
+:root {
+  --paper: #f3ede0;
+  --paper-2: #e9e0cd;
+  --ink: #14213d;
+  --ink-soft: #3d4966;
+  --gold: #a8741a;
+  --gold-bright: #d9a441;
+  --red: #8c1c13;
+  --band: #14213d;
+  --band-fg: #f3ede0;
+  --rule: #cfc3a8;
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1a31; --paper-2: #16233f; --ink: #f1eadb; --ink-soft: #b9bfd0;
+    --gold: #e0ad4e; --gold-bright: #e0ad4e; --red: #c4382a;
+    --band: #f3ede0; --band-fg: #14213d; --rule: #2b3a5e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0f1a31; --paper-2: #16233f; --ink: #f1eadb; --ink-soft: #b9bfd0;
+  --gold: #e0ad4e; --gold-bright: #e0ad4e; --red: #c4382a;
+  --band: #f3ede0; --band-fg: #14213d; --rule: #2b3a5e; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 17px/1.6 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+.wrap { max-width: 1060px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--f-display); margin: 0; text-wrap: balance; }
+h2 { font-style: italic; font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.02; letter-spacing: -0.01em; }
+h3 { font-weight: 600; font-size: 1.15rem; line-height: 1.25; }
+p { margin: 0; max-width: 62ch; }
+.eyebrow { font: 600 0.75rem/1 var(--f-body); letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+
+/* top bar */
+.bar { display: flex; justify-content: space-between; align-items: center; padding-block: 18px; gap: 12px; flex-wrap: wrap; }
+.bar nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.bar nav a { text-decoration: none; color: var(--ink-soft); }
+.bar nav a:hover { color: var(--red); }
+.ctl { display: flex; gap: 10px; align-items: center; }
+.lang { display: flex; border: 2px solid var(--ink); }
+.lang button { font: 600 0.9rem var(--f-body); letter-spacing: 0.06em; background: none; color: var(--ink); border: 0; padding: 10px 18px; cursor: pointer; min-width: 5.5rem; }
+.lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.lang button[aria-pressed="true"]::before { content: "✓ "; color: var(--gold-bright); }
+#b-th { font: 600 1rem var(--f-body); background: none; color: var(--ink); border: 1px solid var(--rule); padding: 9px 12px; cursor: pointer; }
+
+/* hero */
+.hero { position: relative; padding-block: clamp(12px, 3vw, 30px) clamp(48px, 9vw, 110px); display: grid; justify-items: center; text-align: center; }
+.logo { position: relative; width: min(100%, 560px); aspect-ratio: 1; display: grid; place-items: center; }
+.logo canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.logo .word { position: relative; display: grid; justify-items: center; gap: 8px; width: min(130%, calc(100vw - 32px)); transform: translateX(-3%); }
+.hero h1 { font-style: italic; font-weight: 800; font-size: clamp(3rem, 11vw, 5.5rem); line-height: 0.95; letter-spacing: -0.02em; white-space: nowrap; }
+.tag { font: 600 clamp(0.62rem, 2.4vw, 0.9rem) var(--f-body); letter-spacing: 0.38em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+.lede { margin-top: 6px; font: 600 italic clamp(1.35rem, 2.8vw, 1.9rem)/1.3 var(--f-display); color: var(--ink); max-width: 30ch; text-wrap: balance; }
+.hero .sub { margin-top: 18px; font-size: 1.05rem; color: var(--ink-soft); }
+.cta { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.sweep { display: block; width: 100%; height: clamp(70px, 12vw, 140px); margin-top: clamp(24px, 5vw, 56px); }
+.btn { display: inline-block; text-decoration: none; font: 600 0.85rem var(--f-body); letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 24px; border: 1px solid var(--ink); }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn:hover { background: var(--red); border-color: var(--red); color: #f3ede0; }
+
+/* bands */
+.band { padding-block: clamp(56px, 9vw, 104px); }
+.band.dark { background: var(--band); color: var(--band-fg); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band.dark .eyebrow { color: var(--gold-bright); }
+.band.dark .sub { color: inherit; opacity: 0.8; }
+.head { display: grid; gap: 14px; margin-bottom: 44px; }
+.head p { color: var(--ink-soft); }
+.band.dark .head p { color: inherit; opacity: 0.82; }
+
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid currentColor; }
+.grid4 > div { padding: 22px 20px 26px 0; border-right: 1px solid var(--rule); min-width: 0; display: grid; gap: 10px; align-content: start; }
+.grid4 > div:not(:first-child) { padding-left: 20px; }
+.grid4 > div:last-child { border-right: 0; }
+.grid4 .k { font: 900 italic clamp(1.4rem, 2.4vw, 1.9rem)/1.1 var(--f-display); color: var(--red); overflow-wrap: anywhere; }
+.grid4 p { font-size: 0.95rem; color: var(--ink-soft); }
+.band.dark .grid4 > div { border-color: rgba(243,237,224,0.2); }
+.band.dark .grid4 .k { color: var(--gold-bright); }
+.band.dark .grid4 p { color: inherit; opacity: 0.8; }
+
+/* method */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); }
+.two > * { min-width: 0; }
+.stack { display: grid; gap: 18px; }
+.rows { display: grid; border-top: 1px solid var(--rule); }
+.rows > div { display: grid; grid-template-columns: 9.5rem 1fr; gap: 16px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.rows dt, .rows .l { font: 600 0.78rem var(--f-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); padding-top: 3px; }
+.rows .v { color: var(--ink-soft); }
+.rows .v b { color: var(--ink); font-weight: 600; }
+
+.scale { display: flex; gap: 4px; margin-top: 6px; }
+.scale i { flex: 1; height: 38px; background: var(--paper-2); display: grid; place-items: center; font: 600 0.8rem var(--f-body); font-style: normal; color: var(--ink-soft); }
+.scale i.s { background: var(--gold); color: #fff; }
+.scale i.p { background: var(--red); color: #fff; }
+.scale-cap { font-size: 0.85rem; color: var(--ink-soft); margin-top: 8px; }
+
+/* session */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; border-top: 2px solid currentColor; }
+.steps > div { padding: 22px 18px 0 0; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.steps > div::before { counter-increment: s; content: counter(s); font: 900 italic 1.1rem var(--f-display); color: var(--gold-bright); }
+.steps p { font-size: 0.95rem; opacity: 0.82; }
+
+/* faq */
+details { border-bottom: 1px solid var(--rule); padding-block: 16px; }
+details:first-of-type { border-top: 1px solid var(--rule); }
+summary { cursor: pointer; font: 600 1.05rem var(--f-display); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--red); font-size: 1.4rem; line-height: 1; }
+details[open] summary::after { content: "–"; }
+details p { margin-top: 10px; color: var(--ink-soft); }
+
+/* about + contact */
+.joe { display: block; width: 100%; max-width: 100%; height: auto; align-self: center; }
+.bio-pics { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8px; margin-top: 8px; }
+.bio-pics img { display: block; width: 100%; max-width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.bio-pics img:last-child { aspect-ratio: auto; }
+.bio-cap { font-size: 0.8rem; opacity: 0.7; margin-top: -8px; }
+.superq { margin-top: 10px; padding-top: 22px; border-top: 1px solid rgba(243,237,224,0.25); }
+.superq blockquote { margin: 0; font: 600 italic clamp(1.2rem, 2.2vw, 1.55rem)/1.3 var(--f-display); text-wrap: balance; }
+.superq blockquote::before { content: "\201C"; color: var(--gold-bright); }
+.superq blockquote::after { content: "\201D"; color: var(--gold-bright); }
+.superq .who { margin-top: 16px; font-size: 0.95rem; opacity: 0.85; }
+.superq .seals { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(243,237,224,0.25); opacity: 0.9; }
+.certrow { margin-top: clamp(48px, 7vw, 80px); padding-top: clamp(36px, 5vw, 56px); border-top: 1px solid rgba(243,237,224,0.25); align-items: start; }
+.diploma { display: block; width: 100%; max-width: 520px; height: auto; border: 1px solid var(--gold-bright); box-shadow: 0 18px 40px rgba(0,0,0,0.35); justify-self: end; }
+.band.tone { background: var(--paper-2); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.strip img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.strip-cap { font-size: 0.85rem; color: var(--ink-soft); margin-top: 12px; }
+.hoy { margin-top: clamp(40px, 6vw, 64px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hoy-pics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.hoy-pics img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 5 / 7; object-fit: cover; }
+.hoy blockquote { margin: 0; font: 600 italic clamp(1.35rem, 2.6vw, 1.9rem)/1.3 var(--f-display); text-wrap: balance; color: var(--ink); }
+.hoy blockquote::before { content: "\201C"; color: var(--red); }
+.hoy blockquote::after { content: "\201D"; color: var(--red); }
+.hoy-cap { margin-top: 16px; color: var(--ink-soft); }
+.story { max-width: 62ch; margin-top: clamp(32px, 5vw, 48px); display: grid; gap: 1.1em; font-size: 1.08rem; line-height: 1.65; }
+.story .more { display: grid; gap: 1.1em; }
+.story h3 { font-style: italic; font-weight: 800; font-size: 1.45rem; margin-top: 0.8em; color: var(--red); }
+.story h3.lede-h { margin-top: 0; font-size: 1.6rem; color: var(--ink); }
+.story strong { font-weight: 600; color: var(--ink); }
+.story em { color: var(--ink-soft); }
+.readmore { margin-top: 26px; }
+.cert { border: 1px solid var(--gold-bright); padding: 22px; display: grid; gap: 6px; align-self: start; }
+.cert b { font: 900 italic 1.5rem/1.1 var(--f-display); color: var(--gold-bright); }
+.cert small { font-size: 0.85rem; opacity: 0.8; }
+.contact { display: grid; gap: 0; border-top: 1px solid rgba(243,237,224,0.25); max-width: 560px; }
+.contact > div { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 16px; border-bottom: 1px solid rgba(243,237,224,0.25); flex-wrap: wrap; }
+.contact .l { font: 600 0.72rem var(--f-body); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-bright); width: 6rem; }
+.contact .val { font: 600 1.2rem var(--f-display); user-select: all; flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.copy { font: 600 0.72rem var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; background: none; color: inherit; border: 1px solid currentColor; padding: 7px 12px; cursor: pointer; }
+.copy:hover { background: var(--gold-bright); color: #14213d; border-color: var(--gold-bright); }
+.note { font-size: 0.8rem; opacity: 0.7; max-width: 70ch; margin-top: 36px; }
+footer { padding-block: 28px 40px; font-size: 0.8rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 860px) {
+  .grid4, .steps { grid-template-columns: 1fr 1fr; }
+  .grid4 > div { border-right: 0; padding-left: 0 !important; border-bottom: 1px solid var(--rule); }
+  .two { grid-template-columns: 1fr; }
+  .strip { grid-template-columns: 1fr 1fr; }
+  .hoy { grid-template-columns: 1fr; }
+  .diploma { justify-self: start; }
+  }
+@media (max-width: 520px) {
+  .grid4, .steps { grid-template-columns: 1fr; }
+  .rows > div { grid-template-columns: 1fr; gap: 4px; }
+  .bar nav { display: none; }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <nav>
+      <a href="#metodo" data-es="Método" data-en="Method">Método</a>
+      <a href="#sesion" data-es="Sesión" data-en="Session">Sesión</a>
+      <a href="#historia" data-es="Historia" data-en="Story">Historia</a>
+      <a href="#olmo" data-es="Olmo" data-en="About">Olmo</a>
+      <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+    </nav>
+    <div class="ctl">
+      <div class="lang" role="group" aria-label="Idioma / Language"><button id="b-es" aria-pressed="true" type="button" lang="es">Español</button><button id="b-en" aria-pressed="false" type="button" lang="en">English</button></div>
+      <button id="b-th" type="button" aria-label="Tema / Theme">◐</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="logo">
+      <canvas id="enso" aria-hidden="true"></canvas>
+      <div class="word">
+        <h1>Full Range</h1>
+        <div class="tag" data-es="Movimiento sin límites" data-en="Movement without limits">Movimiento sin límites</div>
+      </div>
+    </div>
+    <span class="eyebrow" data-es="Método Hippensteel® · Nivel 103 · CPKE" data-en="Hippensteel Method® · Level 103 · CPKE">Método Hippensteel® · Nivel 103 · CPKE</span>
+    <p class="lede" data-es="Recupera la vitalidad de tu cuerpo, vive sin dolor y haz los movimientos que amas." data-en="Recover your body's vitality, live without pain and do the movements you love.">Recupera la vitalidad de tu cuerpo, vive sin dolor y haz los movimientos que amas.</p>
+    <p class="sub" data-es="Trabajo contigo para que tu cuerpo recupere los 24 rangos de movimiento que le corresponden, liberando la tensión muscular que lo frena en lugar de taparla." data-en="I work with you so we get your body back the 24 ranges of motion it is meant to have, by releasing the muscle tension that holds it back instead of covering it up.">Trabajo contigo para que tu cuerpo recupere los 24 rangos de movimiento que le corresponden, liberando la tensión muscular que lo frena en lugar de taparla.</p>
+    <div class="cta">
+      <a class="btn solid" href="#contacto" data-es="Agendar una sesión" data-en="Book a session">Agendar una sesión</a>
+      <a class="btn" href="#metodo" data-es="Cómo trabajo" data-en="How I work">Cómo trabajo</a>
+    </div>
+    <canvas id="sweep" class="sweep" aria-hidden="true"></canvas>
+  </section>
+</div>
+
+<section class="band dark" id="metodo">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" data-es="El método" data-en="The method">El método</span>
+      <h2 data-es="Cuatro herramientas, un solo objetivo" data-en="Four tools, one goal">Cuatro herramientas, un solo objetivo</h2>
+      <p data-es="Me formé en el método de Joe Hippensteel, que parte de una idea simple: casi toda restricción de movimiento tiene una causa muscular que se puede localizar y soltar. Es el mismo método con el que se rehabilita a atletas profesionales y a Navy SEALs de Estados Unidos." data-en="I trained in Joe Hippensteel's method, which starts from a simple idea: almost every restriction of movement has a muscular cause that can be found and released. It is the same method used to rehabilitate professional athletes and US Navy SEALs.">Me formé en el método de Joe Hippensteel, que parte de una idea simple: casi toda restricción de movimiento tiene una causa muscular que se puede localizar y soltar. Es el mismo método con el que se rehabilita a atletas profesionales y a Navy SEALs de Estados Unidos.</p>
+    </div>
+    <div class="grid4">
+      <div><span class="k">ROM 24™</span><h3 data-es="24 rangos de movimiento" data-en="24 ranges of motion">24 rangos de movimiento</h3><p data-es="Un estándar claro para cada articulación. Medimos dónde estás y qué te falta para llegar." data-en="A clear standard for every joint. We measure where you are and what is missing to get there.">Un estándar claro para cada articulación. Medimos dónde estás y qué te falta para llegar.</p></div>
+      <div><span class="k">HIPP 86™</span><h3 data-es="Liberación de tensión" data-en="Tension release">Liberación de tensión</h3><p data-es="Presión sostenida sobre los puntos donde se concentra la tensión, para que el músculo suelte y el rango vuelva." data-en="Sustained pressure on the points where tension collects, so the muscle lets go and the range returns.">Presión sostenida sobre los puntos donde se concentra la tensión, para que el músculo suelte y el rango vuelva.</p></div>
+      <div><span class="k">MuscleLock™</span><h3 data-es="Entender el bloqueo" data-en="Understanding the lock">Entender el bloqueo</h3><p data-es="Doce causas y cuatro etapas para explicar por qué un músculo se queda atorado y cómo salir de ahí." data-en="Twelve causes and four stages that explain why a muscle gets stuck and how to get out.">Doce causas y cuatro etapas para explicar por qué un músculo se queda atorado y cómo salir de ahí.</p></div>
+      <div><span class="k">+</span><h3 data-es="Calentar y recuperar" data-en="Warm up and recover">Calentar y recuperar</h3><p data-es="Un calentamiento en cuatro partes y reglas de recuperación, como la de las 48 horas, para consolidar lo ganado." data-en="A four-part warm-up and recovery rules, like the 48-hour rule, to lock in what you gain.">Un calentamiento en cuatro partes y reglas de recuperación, como la de las 48 horas, para consolidar lo ganado.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="band" id="fases">
+    <div class="two">
+      <div class="stack">
+        <span class="eyebrow" data-es="Cómo se trabaja" data-en="How it works">Cómo se trabaja</span>
+        <h2 data-es="Dos fases y un ritmo claro" data-en="Two phases and a clear rhythm">Dos fases y un ritmo claro</h2>
+        <p data-es="Primero construimos juntos, después tú mantienes lo ganado. En cada fase sabes qué hacer, cuánto tiempo y hasta dónde llegar." data-en="First we build, then you maintain the gains. In each phase you know what to do, for how long and how far to go.">Primero construimos juntos, después tú mantienes lo ganado. En cada fase sabes qué hacer, cuánto tiempo y hasta dónde llegar.</p>
+        <div>
+          <div class="scale" role="img" aria-label="Escala de dolor 1 a 10 / Pain scale 1 to 10">
+            <i class="s">1</i><i class="s">2</i><i class="s">3</i><i class="s">4</i><i class="s">5</i><i class="s">6</i><i class="s">7</i><i class="p">8</i><i>9</i><i>10</i>
+          </div>
+          <p class="scale-cap" data-es="Escala de intensidad: estiramiento hasta 7, presión hasta 8. Nunca hasta el dolor agudo." data-en="Intensity scale: stretch up to 7, press up to 8. Never into sharp pain.">Escala de intensidad: estiramiento hasta 7, presión hasta 8. Nunca hasta el dolor agudo.</p>
+        </div>
+      </div>
+      <dl class="rows" style="margin:0">
+        <div><dt class="l" data-es="Construcción" data-en="Building">Construcción</dt><dd class="v" style="margin:0" data-es="Intervalos de 2 minutos con 1 minuto de descanso, repetidos, para recuperar el rango poco a poco." data-en="Working in 2-minute intervals with 1 minute of rest, repeated, to recover the range little by little.">Intervalos de 2 minutos con 1 minuto de descanso, repetidos, para recuperar el rango poco a poco.</dd></div>
+        <div><dt class="l" data-es="Mantenimiento" data-en="Maintenance">Mantenimiento</dt><dd class="v" style="margin:0" data-es="De 15 a 30 minutos al día para conservar lo que ya ganaste." data-en="15 to 30 minutes a day to keep what you have gained.">De 15 a 30 minutos al día para conservar lo que ya ganaste.</dd></div>
+        <div><dt class="l" data-es="Zona de ganancias" data-en="Gains zone">Zona de ganancias</dt><dd class="v" style="margin:0" data-es="Entre 30 y 60 segundos de relajación total entre repeticiones." data-en="30 to 60 seconds of full relaxation between repetitions.">Entre 30 y 60 segundos de relajación total entre repeticiones.</dd></div>
+        <div><dt class="l" data-es="Regla de 48 h" data-en="48-hour rule">Regla de 48 h</dt><dd class="v" style="margin:0" data-es="Después de un trabajo profundo, el cuerpo necesita dos días antes de volver a la misma zona con intensidad." data-en="After deep work, the body needs two days before returning to the same area at intensity.">Después de un trabajo profundo, el cuerpo necesita dos días antes de volver a la misma zona con intensidad.</dd></div>
+      </dl>
+    </div>
+  </section>
+</div>
+
+<section class="band dark" id="sesion">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" data-es="La sesión" data-en="The session">La sesión</span>
+      <h2 data-es="Qué pasa cuando vienes" data-en="What happens when you come">Qué pasa cuando vienes</h2>
+    </div>
+    <div class="steps">
+      <div><h3 data-es="Conversamos" data-en="We talk">Conversamos</h3><p data-es="Tu historia, tu deporte, tu rutina y qué sientes que no se mueve como antes." data-en="Your history, your sport, your routine and what no longer moves the way it did.">Tu historia, tu deporte, tu rutina y qué sientes que no se mueve como antes.</p></div>
+      <div><h3 data-es="Medimos" data-en="We measure">Medimos</h3><p data-es="Revisamos tus rangos de movimiento contra el estándar para ver dónde estás." data-en="We check your ranges of motion against the standard to see where you are.">Revisamos tus rangos de movimiento contra el estándar para ver dónde estás.</p></div>
+      <div><h3 data-es="Soltamos" data-en="We release">Soltamos</h3><p data-es="Trabajo manual con presión sostenida sobre los puntos clave, dentro de tu escala de intensidad." data-en="Hands-on work with sustained pressure on the key points, within your intensity scale.">Trabajo manual con presión sostenida sobre los puntos clave, dentro de tu escala de intensidad.</p></div>
+      <div><h3 data-es="Te llevas un plan" data-en="You leave with a plan">Te llevas un plan</h3><p data-es="Ejercicios cortos para hacer en casa y cuándo volver a medir." data-en="Short exercises for home and when to measure again.">Ejercicios cortos para hacer en casa y cuándo volver a medir.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="band" id="para-quien">
+    <div class="two">
+      <div class="stack">
+        <span class="eyebrow" data-es="Para quién" data-en="Who it's for">Para quién</span>
+        <h2 data-es="Para quien quiere moverse mejor" data-en="For anyone who wants to move better">Para quien quiere moverse mejor</h2>
+        <p data-es="Deportistas que buscan rendir sin lesionarse, personas que pasan el día sentadas y sienten el cuerpo rígido, y quienes notan que perdieron movilidad con los años." data-en="Athletes who want to perform without getting hurt, people who sit all day and feel stiff, and anyone who feels they have lost mobility over the years.">Deportistas que buscan rendir sin lesionarse, personas que pasan el día sentadas y sienten el cuerpo rígido, y quienes notan que perdieron movilidad con los años.</p>
+      </div>
+      <div>
+        <details open><summary><span data-es="¿Por qué me duele?" data-en="Why does it hurt?">¿Por qué me duele?</span></summary><p data-es="Porque algo está rígido. La rigidez no viene del dolor y las lesiones: el dolor y las lesiones vienen de la rigidez. Un músculo que pasa de rígido a trabado (MuscleLock™) estrangula nervios y vasos sanguíneos, y de ahí salen los jalones, las hernias de disco, las articulaciones hueso contra hueso y el dolor crónico. Tendinitis, bursitis, "envejecimiento": etiquetas distintas para lo mismo, tensión." data-en="Because something is tight. Stiffness does not come from pain and injury: pain and injury come from stiffness. A muscle that goes from tight to locked (MuscleLock™) strangles nerves and blood vessels, and that is where pulls, herniated discs, bone-on-bone joints and chronic pain come from. Tendinitis, bursitis, "aging": different labels for the same thing, tension.">Porque algo está rígido. La rigidez no viene del dolor y las lesiones: el dolor y las lesiones vienen de la rigidez. Un músculo que pasa de rígido a trabado (MuscleLock™) estrangula nervios y vasos sanguíneos, y de ahí salen los jalones, las hernias de disco, las articulaciones hueso contra hueso y el dolor crónico. Tendinitis, bursitis, "envejecimiento": etiquetas distintas para lo mismo, tensión.</p></details>
+        <details><summary><span data-es="¿Qué es un rango completo?" data-en="What is a full range?">¿Qué es un rango completo?</span></summary><p data-es="Un estándar, no una opinión. El ROM 24™ fija 24 posiciones y hasta dónde debe llegar cada parte del cuerpo: el punto neutro que tiene un niño. Un ejemplo: de pie, con las piernas rectas, la nariz tiene que tocar la rodilla. Quien no llega está en la Zona de Peligro™ y tarde o temprano se lesiona. Lo primero que hago es medir tus rangos; con eso, la mayoría de los problemas se ve de inmediato." data-en="A standard, not an opinion. ROM 24™ sets 24 positions and how far each part of the body must reach: the neutral point a child has. One example: standing with straight legs, your nose has to touch your knee. Whoever falls short is in the Danger Zone™ and sooner or later gets hurt. The first thing I do is measure your ranges; with that, most problems show up at once.">Un estándar, no una opinión. El ROM 24™ fija 24 posiciones y hasta dónde debe llegar cada parte del cuerpo: el punto neutro que tiene un niño. Un ejemplo: de pie, con las piernas rectas, la nariz tiene que tocar la rodilla. Quien no llega está en la Zona de Peligro™ y tarde o temprano se lesiona. Lo primero que hago es medir tus rangos; con eso, la mayoría de los problemas se ve de inmediato.</p></details>
+        <details><summary><span data-es="¿Duele?" data-en="Does it hurt?">¿Duele?</span></summary><p data-es="Sí, y con número. Al estirar llegamos a un 7 de 10, nunca más; al presionar un punto caliente, a un 8. Hasta 7 el músculo se adapta y se alarga; desde 8 se defiende y se contrae, y se pierde la sesión. Tú dices el número y tú controlas el tiempo, no yo. El dolor que sientes al soltar la posición es dolor positivo: tejido recién abierto que está recibiendo sangre." data-en="Yes, and with a number. Stretching goes to a 7 out of 10, never more; pressing a hot spot goes to an 8. Up to 7 the muscle adapts and lengthens; from 8 it defends itself and contracts, and the session is wasted. You say the number and you control the time, not me. The pain you feel coming out of a position is positive pain: freshly opened tissue getting blood.">Sí, y con número. Al estirar llegamos a un 7 de 10, nunca más; al presionar un punto caliente, a un 8. Hasta 7 el músculo se adapta y se alarga; desde 8 se defiende y se contrae, y se pierde la sesión. Tú dices el número y tú controlas el tiempo, no yo. El dolor que sientes al soltar la posición es dolor positivo: tejido recién abierto que está recibiendo sangre.</p></details>
+        <details><summary><span data-es="¿Qué hacemos en una sesión?" data-en="What happens in a session?">¿Qué hacemos en una sesión?</span></summary><p data-es="Estirar hasta el estándar y destrabar lo que no deja llegar. Cada posición se sostiene 2 minutos, el tiempo que tarda un músculo rígido en abrirse, y después viene un minuto de Zona de ganancias: acostado, sin hacer nada, mientras la sangre nutre lo que se abrió. Cuando un estiramiento se atasca, presiono el epicentro del músculo con el método HIPP 86™ para que las fibras suelten. Se estira; la presión ayuda." data-en="Stretch to the standard and unlock whatever keeps you from getting there. Each position is held for 2 minutes, the time a tight muscle takes to open, followed by a minute in the Gains Zone: lying down, doing nothing, while blood feeds what just opened. When a stretch gets stuck, I press the muscle's epicenter with the HIPP 86™ method so the fibers let go. Stretching is the work; pressure helps it.">Estirar hasta el estándar y destrabar lo que no deja llegar. Cada posición se sostiene 2 minutos, el tiempo que tarda un músculo rígido en abrirse, y después viene un minuto de Zona de ganancias: acostado, sin hacer nada, mientras la sangre nutre lo que se abrió. Cuando un estiramiento se atasca, presiono el epicentro del músculo con el método HIPP 86™ para que las fibras suelten. Se estira; la presión ayuda.</p></details>
+        <details><summary><span data-es="¿Cuánto tiempo toma?" data-en="How long does it take?">¿Cuánto tiempo toma?</span></summary><p data-es="Lo que tomaría construir fuerza. La fase de construcción va de varias horas a más de cien horas de estiramiento, según de dónde partas; un músculo trabado reacciona al HIPP 86™ en segundos si está en etapa 1 y en días si está en etapa 4. Estirar toma tiempo, no fuerza: al músculo se le persuade, no se le obliga. Al llegar al estándar entras a mantenimiento: 15 a 30 minutos al día, y ya no vuelves a perderlo." data-en="What building strength would take. The building phase runs from a few hours to more than a hundred hours of stretching, depending on where you start; a locked muscle responds to HIPP 86™ in seconds at stage 1 and in days at stage 4. Stretching takes time, not force: you persuade a muscle, you don't push it. Once you reach the standard you move to maintenance: 15 to 30 minutes a day, and you never lose it again.">Lo que tomaría construir fuerza. La fase de construcción va de varias horas a más de cien horas de estiramiento, según de dónde partas; un músculo trabado reacciona al HIPP 86™ en segundos si está en etapa 1 y en días si está en etapa 4. Estirar toma tiempo, no fuerza: al músculo se le persuade, no se le obliga. Al llegar al estándar entras a mantenimiento: 15 a 30 minutos al día, y ya no vuelves a perderlo.</p></details>
+        <details><summary><span data-es="Ya probé fisioterapia, yoga y rodillos. ¿En qué es distinto?" data-en="I already tried physio, yoga and foam rollers. What's different?">Ya probé fisioterapia, yoga y rodillos. ¿En qué es distinto?</span></summary><p data-es="En que aquí hay un estándar. Yoga, Pilates, PNF, rodillos, liberación miofascial: ninguno mide tu rango contra una meta ni lo fija, así que alivian el síntoma y el problema se queda. Aquí medimos los 24 rangos, trabajamos hasta el estándar y lo mantenemos. Las articulaciones, vértebras incluidas, se acomodan solas cuando el músculo deja de jalar." data-en="There is a standard here. Yoga, Pilates, PNF, foam rollers, myofascial release: none of them measures your range against a target or locks it in, so they ease the symptom and the problem stays. Here we measure the 24 ranges, work to the standard and keep it. Joints, vertebrae included, settle on their own once the muscle stops pulling.">En que aquí hay un estándar. Yoga, Pilates, PNF, rodillos, liberación miofascial: ninguno mide tu rango contra una meta ni lo fija, así que alivian el síntoma y el problema se queda. Aquí medimos los 24 rangos, trabajamos hasta el estándar y lo mantenemos. Las articulaciones, vértebras incluidas, se acomodan solas cuando el músculo deja de jalar.</p></details>
+        <details><summary><span data-es="¿Qué hago entre sesiones?" data-en="What do I do between sessions?">¿Qué hago entre sesiones?</span></summary><p data-es="Regla de 48 horas. Un rango recién abierto es tejido sin acondicionar: dos o tres días sin cargas pesadas ni entrenamientos duros, o se vuelve a trabar. Si te despierta el dolor de madrugada, muévete, estira suave, masajea unos minutos hacia el corazón y vuelve a dormir. Y tu tarea diaria: la rutina de mantenimiento que te doy, 15 a 30 minutos, con ropa cómoda y sin más equipo que el piso." data-en="The 48-hour rule. A newly opened range is unconditioned tissue: two or three days without heavy loads or hard training, or it locks up again. If pain wakes you at night, move, stretch gently, massage toward the heart for a few minutes and go back to sleep. And your daily homework: the maintenance routine I give you, 15 to 30 minutes, comfortable clothes and no equipment beyond the floor.">Regla de 48 horas. Un rango recién abierto es tejido sin acondicionar: dos o tres días sin cargas pesadas ni entrenamientos duros, o se vuelve a trabar. Si te despierta el dolor de madrugada, muévete, estira suave, masajea unos minutos hacia el corazón y vuelve a dormir. Y tu tarea diaria: la rutina de mantenimiento que te doy, 15 a 30 minutos, con ropa cómoda y sin más equipo que el piso.</p></details>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="band tone" id="historia">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" data-es="Mi historia" data-en="My story">Mi historia</span>
+      <h2 data-es="Del dolor al rendimiento: por qué me hice practicante de fisio-kinesiología" data-en="From pain to performance: why I became a physio-kinesiology practitioner">Del dolor al rendimiento: por qué me hice practicante de fisio-kinesiología</h2>
+    </div>
+    <div class="strip">
+      <img src="img/taller-1.jpg" width="900" height="900" alt="Olmo, de pie, presiona la espalda de un alumno que está en postura de niño sobre un tapete, durante el taller.">
+      <img src="img/taller-2.jpg" width="900" height="900" alt="Olmo guía el cuello y los hombros de un alumno sentado con las piernas abiertas, en una terraza.">
+      <img src="img/taller-3.jpg" width="900" height="900" alt="Olmo sonríe sentado en el piso con las plantas de los pies juntas, entre árboles.">
+      <img src="img/taller-4.jpg" width="900" height="900" alt="Olmo aplica presión con las manos sobre la espalda baja de un alumno acostado boca abajo.">
+    </div>
+    <p class="strip-cap" data-es="Formación y certificación con Joe Hippensteel en San Diego, octubre de 2026." data-en="Training and certification with Joe Hippensteel in San Diego, October 2026.">Formación y certificación con Joe Hippensteel en San Diego, octubre de 2026.</p>
+
+
+    <div class="hoy">
+      <div class="hoy-pics">
+        <img src="img/boxeo-1.jpg" width="785" height="1100" alt="Olmo, con guantes rojos, cubre la cabeza mientras un entrenador lanza un golpe en un gimnasio de boxeo.">
+        <img src="img/boxeo-2.jpg" width="718" height="1100" alt="Olmo en guardia frente a su entrenador, descalzo sobre el tatami de un gimnasio de boxeo.">
+      </div>
+      <div>
+        <span class="eyebrow" data-es="Hoy" data-en="Today">Hoy</span>
+        <blockquote data-es="Hoy entreno boxeo a alta intensidad con los mismos entrenadores que trabajan con profesionales. A los 41, gracias a este método, me siento como a los 18. O mejor." data-en="Today I box at high intensity with the same coaches who work with professionals. At 41, thanks to this method, I feel like I'm 18. Or better.">Hoy entreno boxeo a alta intensidad con los mismos entrenadores que trabajan con profesionales. A los 41, gracias a este método, me siento como a los 18. O mejor.</blockquote>
+        <p class="hoy-cap" data-es="Lo que sigue es cómo llegué aquí." data-en="What follows is how I got here.">Lo que sigue es cómo llegué aquí.</p>
+      </div>
+    </div>
+
+    <div class="story" data-lang="es">
+      <h3 class="lede-h">Empezó con el box. Y con un recordatorio bastante doloroso de que el entusiasmo y la preparación física no son lo mismo.</h3>
+      <p>Cerca de los cuarenta decidí volver al box, un deporte que amé y practiqué mucho entre el final de mi adolescencia y los primeros veintes.</p>
+      <p>Solo había un problema: a mi entusiasmo se le había olvidado que mi cuerpo ya no tenía veinte años.</p>
+      <p>Volví a pegarle a las manoplas y a los costales con todo. Golpes duros, sesiones intensas, la euforia conocida del entrenamiento. La estaba pasando de maravilla.</p>
+      <p>Mi espalda, sin embargo, opinaba otra cosa.</p>
+      <p>Y había otro ingrediente en esta receta para el desastre: <strong>mi vida profesional implicaba una cantidad extraordinaria de horas sentado.</strong></p>
+      <p>Había terminado mis estudios de psicología y llevaba más de trece años trabajando en terapia conductual. En el camino, también me volví intérprete simultáneo de talleres especializados de psicología y traductor de libros profesionales.</p>
+      <p>Me encantaba el trabajo intelectual. Pero interpretar un taller puede significar ocho horas sentado prácticamente en la misma posición, concentrado al máximo, con muy poco movimiento físico.</p>
+      <p>Así que este era mi brillante programa de acondicionamiento: entrenar como un veinteañero entusiasta, pegarle al costal lo más fuerte posible y después pasar el resto del día sentado como estatua.</p>
+      <p>¿Qué podía salir mal?</p>
+      <p>Bastante, por lo visto.</p>
+      <p>Al poco tiempo, la espalda se me tensó tanto que el dolor era casi intolerable. Empecé con dolores de cabeza diarios. Sentarme dolía. Dormir costaba. Entrenar, ni pensarlo. El ibuprofeno daba un alivio temporal, pero yo no estaba recuperando mi cuerpo.</p>
+      <p>Y no me entusiasmaba la idea de pasar meses yendo de consultorio en consultorio con la esperanza de que alguien descubriera qué tenía.</p>
+      <div class="more" hidden>
+        <h3>Un Navy SEAL, un libro y un nombre olvidado</h3>
+        <p>En medio de esa experiencia miserable, me acordé de algo que había leído en <em>Can't Hurt Me</em>, de David Goggins, ex Navy SEAL.</p>
+        <p>Goggins describe un periodo de deterioro físico severo, dolor incapacitante y tensión muscular que lo dejó batallando para funcionar. Al final regresó a un sistema de estiramientos que había conocido durante su entrenamiento como SEAL.</p>
+        <p>El hombre detrás de ese sistema era <strong>Joe Hippensteel</strong>, fundador de Ultimate Human Performance.</p>
+        <p>Goggins al principio había descartado el entrenamiento. Después, cuando los enfoques convencionales no resolvieron sus problemas, lo retomó y le atribuyó haber recuperado sus capacidades físicas.</p>
+        <p>Recuerdo haber pensado: <em>Un momento. ¿Cómo se llamaba ese señor?</em></p>
+        <p>Un poco de trabajo de detective en internet después, encontré los videos instructivos de Joe.</p>
+        <p>Luego vi el precio.</p>
+        <p><em>Bueno, es caro para ser estiramientos.</em></p>
+        <p>Por suerte, la desesperación a veces nos abre la mente. Compré el material y empecé a seguir los protocolos.</p>
+        <p>Visto en retrospectiva, fue de lo mejor en lo que he gastado dinero.</p>
+        <h3>Lo que pasó después me sorprendió</h3>
+        <p>Conforme avanzaba con los ejercicios, mi movilidad mejoró y el dolor fue cediendo.</p>
+        <p>Volví al box.</p>
+        <p>Pero aquí viene la parte que no esperaba: <strong>empecé a sentirme mejor a los cuarenta de lo que recordaba sentirme a los veinte.</strong></p>
+        <p>Podía entrenar más seguido. Amanecía con menos dolor muscular. Podía pegar más fuerte, recuperarme con más comodidad y disfrutar la actividad física sin estar negociando todo el tiempo con mis músculos.</p>
+        <p>Había ido a buscar alivio para el dolor y encontré una relación distinta con el entrenamiento.</p>
+        <h3>Luego vino la comparación que importaba</h3>
+        <p>Más o menos cuando yo volví al box, mi pareja de entonces empezó Kung Fu.</p>
+        <p>Los dos desarrollamos problemas físicos, pero los de ella fueron bastante más severos. Tenía un dolor ciático incapacitante que le hacía dificilísimo estar de pie.</p>
+        <p>Hizo lo que haría casi cualquier persona razonable: buscó ayuda profesional.</p>
+        <p>Siguieron fisioterapia, osteopatía, programas de estiramiento, medicamentos y otras intervenciones. Puede que algunas ayudaran, pero después de meses seguía sufriendo.</p>
+        <p>Mientras tanto, me había visto pasar de apenas poder entrenar a disfrutar el box otra vez.</p>
+        <p>Al final decidió probar el mismo sistema de estiramientos.</p>
+        <p>Lo tomó con disciplina, siguió los protocolos y empezó a tener mejoras propias.</p>
+        <p>También trabajamos movilidad de cuello y liberación de puntos gatillo, porque tenía un historial de migrañas recurrentes.</p>
+        <p>Con el tiempo pasó algo notable: las migrañas, que antes llegaban con regularidad de reloj, dejaron de repetirse como antes.</p>
+        <p>Fue un cambio enorme en su calidad de vida.</p>
+        <p>Claro: estas son nuestras experiencias personales, no una prueba de que todo dolor tenga la misma causa ni responda al mismo tratamiento. Distintas condiciones requieren distintos enfoques, y la buena fisioterapia y la atención médica tienen un papel importante.</p>
+        <p>Pero lo que había visto bastó para despertarme la curiosidad.</p>
+        <h3>Lo que me convenció no fue solo la mejoría. Fue el método.</h3>
+        <p>Mi formación profesional moldeó la forma en que evalué lo que estaba pasando.</p>
+        <p>Como terapeuta conductual, he pasado años estudiando cómo aprende la gente, cómo cambia la conducta y cómo traducir principios complejos en intervenciones prácticas.</p>
+        <p>Como intérprete y traductor de material especializado de psicología, también he tenido el privilegio de trabajar de cerca con ideas de muchas escuelas de pensamiento.</p>
+        <p>Una lección me ha acompañado en todo ese trabajo: <strong>una teoría hermosa es maravillosa, pero ¿qué pasa cuando la ponemos a prueba?</strong></p>
+        <p>Siempre me han interesado los resultados. No la terminología impresionante, las explicaciones elaboradas ni la reputación de quien inventó una técnica.</p>
+        <p>¿Funciona? ¿Podemos observar el cambio? ¿Podemos reproducir la mejoría? ¿Podemos enseñarle a alguien a hacerlo por su cuenta?</p>
+        <p>Y eso es precisamente lo que me atrajo del sistema de Joe Hippensteel.</p>
+        <p>No era simplemente "estira con regularidad y ve cómo te sientes".</p>
+        <p>Era un proceso estructurado con estándares específicos.</p>
+        <p>¿Cómo se ejecuta un estiramiento? ¿Cuál es la posición correcta? ¿Cuánto tiempo se sostiene? ¿Cuánto descanso conviene? ¿Qué rango de movimiento buscamos? ¿Cómo se distingue la fase inicial de desarrollo de la de mantenimiento?</p>
+        <p>El sistema abarca <strong>24 rangos de movimiento</strong>, con estándares de desempeño y progresiones definidos.</p>
+        <p>En lugar de adivinar si había estirado suficiente, tenía algo concreto que practicar y evaluar.</p>
+        <p>Después de años de explorar técnicas diseñadas para mejorar el funcionamiento humano, encontré un enfoque que, en mi experiencia, dio resultados inusualmente claros y tangibles.</p>
+        <p>El objetivo ya no era solo hacer desaparecer la molestia de hoy. Era desarrollar y mantener la movilidad necesaria para las actividades de mañana.</p>
+        <p>Y una vez que llegué a mantenimiento, la rutina se volvió una parte manejable de mi entrenamiento, en vez de otro proyecto enorme exigiendo mi atención.</p>
+        <h3>Del descubrimiento personal a la formación profesional</h3>
+        <p>Con el tiempo, empecé a compartir lo aprendido con gente cercana.</p>
+        <p>Algunos eran deportistas. Otros solo querían sentarse cómodos, dormir mejor, moverse sin molestias innecesarias o volver a actividades que amaban.</p>
+        <p>Vi suficientes experiencias alentadoras como para querer ir más allá de recomendar videos.</p>
+        <p>Quería entender el sistema a fondo, aprender directamente de su creador y volverme competente para enseñarlo y aplicarlo.</p>
+        <p>Así que viajé a San Diego y completé la formación profesional y la certificación con Joe Hippensteel en el enfoque de fisio-kinesiología de Ultimate Human Performance.</p>
+        <p>Lo que empezó como un intento de recuperar mi espalda se había convertido en una nueva dirección profesional.</p>
+        <h3>Y sí, sigo siendo mi propio alumno</h3>
+        <p>Hace poco sufrí una lesión seria de tobillo durante un entrenamiento de artes marciales: un esguince de grado III y una pequeña fractura.</p>
+        <p>La recuperación ha exigido paciencia, ajustes y la disposición a respetar lo que mi cuerpo puede y no puede tolerar por ahora.</p>
+        <p>Los principios de movilidad han seguido siendo útiles, pero he tenido que adaptar su aplicación a la lesión y a su etapa de curación.</p>
+        <p>Ya estoy regresando al entrenamiento que corresponde, mientras sigo trabajando hacia los estándares de movilidad que quiero alcanzar antes de retomar actividades más exigentes.</p>
+        <p>A estas alturas de mi vida, ya no veo la práctica de movilidad como algo que tengo que hacer porque algo anda mal.</p>
+        <p><strong>La veo como una inversión en la libertad física que quiero disfrutar durante décadas.</strong></p>
+        <h3>Por qué hago esto</h3>
+        <p>Sé lo que es amar la actividad física y de pronto no poder entrenar, sentarte cómodo ni dormir sin dolor.</p>
+        <p>También conozco el placer enorme de volver a hacer lo que amas.</p>
+        <p>Por eso decidí hacerme practicante.</p>
+        <p>No porque crea que un método resuelve todos los problemas. No lo hace.</p>
+        <p>No porque piense que la atención médica profesional sea innecesaria. No lo es.</p>
+        <p>Sino porque viví algo valioso, aprendí un enfoque sistemático y quise poner ese conocimiento al alcance de otros.</p>
+        <p>No tienes que creerme. Podemos evaluar tu movilidad actual, fijar metas realistas, trabajar de forma sistemática y observar qué cambia.</p>
+        <p>Mi meta es simple: <strong>ayudar a la gente a recuperar y desarrollar la libertad de movimiento que le permita vivir, trabajar y entrenar con más confianza.</strong></p>
+        <p>Al final, solo tenemos un cuerpo.</p>
+        <p>Más vale aprender a cuidarlo bien.</p>
+      </div>
+    </div>
+
+    <div class="story" data-lang="en" hidden>
+      <h3 class="lede-h">It started with boxing. And a rather painful reminder that enthusiasm and physical preparedness are not the same thing.</h3>
+      <p>In my late thirties, I decided to return to boxing, a sport I had loved and practiced extensively in my late teens and early twenties.</p>
+      <p>There was only one problem: my enthusiasm had apparently forgotten that my body was no longer twenty.</p>
+      <p>I went back to hitting the pads and heavy bags with everything I had. Hard punches, intense sessions, the familiar exhilaration of training. I was having a wonderful time.</p>
+      <p>My back, however, had other opinions.</p>
+      <p>And there was another ingredient in this recipe for disaster: <strong>my professional life involved an extraordinary amount of sitting.</strong></p>
+      <p>I had completed my studies in psychology and spent more than thirteen years working in behavioral therapy. Along the way, I also became a simultaneous interpreter for specialized psychology workshops and a translator of professional books.</p>
+      <p>I loved the intellectual work. But interpreting a workshop can mean spending eight hours sitting in practically the same position, concentrating intensely, with remarkably little physical movement.</p>
+      <p>So here was my brilliant fitness program: train like an enthusiastic twenty-year-old, hit heavy bags as hard as possible, and then spend the rest of the day sitting like a statue.</p>
+      <p>What could possibly go wrong?</p>
+      <p>Quite a lot, apparently.</p>
+      <p>Before long, my back became so tight that the pain was nearly intolerable. I developed daily headaches. Sitting was painful. Sleeping was difficult. Training was out of the question. Ibuprofen offered temporary relief, but I wasn't getting my body back.</p>
+      <p>And I wasn't particularly excited about the prospect of spending months going from practitioner to practitioner, hoping someone could figure out what was wrong.</p>
+      <div class="more" hidden>
+        <h3>A Navy SEAL, a book, and a forgotten name</h3>
+        <p>Somewhere in the middle of that miserable experience, I remembered something I had read in <em>Can't Hurt Me</em>, by former Navy SEAL David Goggins.</p>
+        <p>Goggins described a period of severe physical deterioration, debilitating pain, and muscular tension that had left him struggling to function. He eventually returned to a stretching system he had encountered during his Navy SEAL training.</p>
+        <p>The man behind that system was <strong>Joe Hippensteel</strong>, founder of Ultimate Human Performance.</p>
+        <p>Goggins had initially dismissed the training. Later, when conventional approaches hadn't resolved his problems, he revisited it and credited it with helping him regain his physical capabilities.</p>
+        <p>I remembered thinking, <em>Wait a minute. What was that guy's name again?</em></p>
+        <p>A little online detective work later, I found Joe's instructional videos.</p>
+        <p>Then I saw the price.</p>
+        <p><em>Well, that's expensive for stretching.</em></p>
+        <p>Fortunately, desperation occasionally makes us more open-minded. I purchased the material and started following the protocols.</p>
+        <p>Looking back, that was among the best money I've ever spent.</p>
+        <h3>What happened next surprised me</h3>
+        <p>As I worked through the exercises, my mobility improved and the pain gradually subsided.</p>
+        <p>I returned to boxing.</p>
+        <p>But here is the part I hadn't expected: <strong>I started feeling better in my forties than I remembered feeling in my twenties.</strong></p>
+        <p>I could train more frequently. I felt less soreness when I woke up. I could hit harder, recover more comfortably, and enjoy being physically active without constantly negotiating with my muscles.</p>
+        <p>I had gone looking for relief from pain and discovered an entirely different relationship with training.</p>
+        <h3>Then came the real comparison</h3>
+        <p>Around the same time I returned to boxing, my then-partner took up Kung Fu.</p>
+        <p>We both developed physical problems, but hers were considerably more severe. She experienced debilitating sciatic pain that made standing extraordinarily difficult.</p>
+        <p>She did what most reasonable people would do: she sought professional help.</p>
+        <p>Physiotherapy, osteopathy, stretching programs, medication, and other interventions followed. Some may have provided benefits, but after months, she was still suffering.</p>
+        <p>Meanwhile, she had watched me go from barely being able to train to enjoying boxing again.</p>
+        <p>Eventually, she decided to try the same stretching system.</p>
+        <p>She approached it diligently, followed the protocols, and began experiencing improvements of her own.</p>
+        <p>We also worked on neck mobility and trigger-point release because she had a history of recurring migraines.</p>
+        <p>Over time, something remarkable happened: the migraines that had previously appeared with almost clockwork regularity stopped recurring as they had before.</p>
+        <p>That was an enormous change in her quality of life.</p>
+        <p>Of course, these are our personal experiences, not proof that every painful condition has the same cause or will respond to the same treatment. Different conditions require different approaches, and good physiotherapy and medical care have important roles.</p>
+        <p>But what I had witnessed was enough to make me genuinely curious.</p>
+        <h3>What convinced me wasn't just the improvement. It was the method.</h3>
+        <p>My professional background shaped how I evaluated what was happening.</p>
+        <p>As a behavior therapist, I've spent years studying how people learn, how behavior changes, and how to translate complex principles into practical interventions.</p>
+        <p>As an interpreter and translator of specialized psychology material, I've also had the privilege of working closely with ideas from many different schools of thought.</p>
+        <p>One lesson has stayed with me throughout that work: <strong>a beautiful theory is wonderful, but what happens when we actually put it to the test?</strong></p>
+        <p>I've always been interested in results. Not impressive terminology, elaborate explanations, or the reputation of whoever invented a technique.</p>
+        <p>Does it work? Can we observe the change? Can we reproduce the improvement? Can we teach someone to do it independently?</p>
+        <p>And that is precisely what attracted me to Joe Hippensteel's system.</p>
+        <p>It wasn't simply, "Stretch regularly and see how you feel."</p>
+        <p>It was a structured process with specific standards.</p>
+        <p>How should a stretch be performed? What is the correct position? How long should it be held? How much rest is appropriate? What range of motion are we trying to achieve? How do we distinguish the initial development phase from maintenance?</p>
+        <p>The system addresses <strong>24 ranges of motion</strong>, with defined performance standards and progressions.</p>
+        <p>Instead of guessing whether I had stretched enough, I had something concrete to practice and evaluate.</p>
+        <p>After years of exploring techniques designed to improve human functioning, I found an approach that, in my own experience, delivered unusually clear, tangible results.</p>
+        <p>The objective was no longer merely to make today's discomfort disappear. It was to develop and maintain the mobility needed to support tomorrow's activities.</p>
+        <p>And once I reached maintenance, the routine became a manageable part of my training rather than another enormous project demanding my attention.</p>
+        <h3>From personal discovery to professional training</h3>
+        <p>Over time, I began sharing what I had learned with people close to me.</p>
+        <p>Some were athletes. Others simply wanted to sit comfortably, sleep better, move without unnecessary discomfort, or return to activities they loved.</p>
+        <p>I saw enough encouraging experiences that I wanted to go beyond recommending videos.</p>
+        <p>I wanted to understand the system properly, learn directly from its creator, and become competent at teaching and applying it.</p>
+        <p>So I traveled to San Diego and completed professional training and certification with Joe Hippensteel in the Ultimate Human Performance approach to physio-kinesiology.</p>
+        <p>What began as an attempt to get my own back functioning again had become a new professional direction.</p>
+        <h3>And yes, I'm still my own student</h3>
+        <p>More recently, I suffered a serious ankle injury involving a Grade III sprain and a small fracture during martial arts training.</p>
+        <p>Recovery has required patience, adjustments, and a willingness to respect what my body can and cannot currently tolerate.</p>
+        <p>The mobility principles have remained useful, but I've had to adapt their application to the injury and its stage of healing.</p>
+        <p>I'm already returning to appropriate training, while continuing to work toward the mobility standards I want to achieve before resuming more demanding activities.</p>
+        <p>At this stage of my life, I no longer see mobility practice as something I have to do because something is wrong.</p>
+        <p><strong>I see it as an investment in the physical freedom I want to enjoy for decades.</strong></p>
+        <h3>Why I do this</h3>
+        <p>I know what it's like to love physical activity and suddenly find yourself unable to train, sit comfortably, or sleep without pain.</p>
+        <p>I also know the extraordinary pleasure of getting back to doing what you love.</p>
+        <p>That's why I decided to become a practitioner.</p>
+        <p>Not because I believe one method solves every problem. It doesn't.</p>
+        <p>Not because I think professional medical care is unnecessary. It isn't.</p>
+        <p>But because I experienced something valuable, learned a systematic approach to it, and wanted to make that knowledge available to others.</p>
+        <p>You don't have to take my word for it. We can assess your current mobility, identify realistic goals, work systematically, and observe what changes.</p>
+        <p>My goal is simple: <strong>to help people recover and develop the freedom of movement that allows them to live, work, and train with greater confidence.</strong></p>
+        <p>After all, we only get one body.</p>
+        <p>We might as well learn how to take good care of it.</p>
+      </div>
+    </div>
+    <button class="btn readmore" type="button" id="readmore" aria-expanded="false" data-es="Seguir leyendo" data-en="Keep reading">Seguir leyendo</button>
+  </div>
+</section>
+
+<section class="band dark" id="olmo">
+  <div class="wrap">
+  <div class="two">
+    <div class="stack">
+      <span class="eyebrow" data-es="Quién está detrás" data-en="Who is behind it">Quién está detrás</span>
+      <h2>Olmo Araiza Woolrich</h2>
+      <p data-es="Fundé Full Range para llevar a mi práctica el trabajo de Joe Hippensteel. Estudio y practico el método a diario, y lo explico en español para que cualquiera pueda entender qué le pasa a su cuerpo y qué hacer al respecto. Hoy entreno boxeo a toda intensidad por lo menos una vez a la semana y estoy aprendiendo Muay Thai en la Ciudad de México, a los 41. Con energía y sin dolor." data-en="I founded Full Range to bring Joe Hippensteel's work into my practice. I study and practice the method daily, and I explain it in plain terms so anyone can understand what is going on in their body and what to do about it. Now I train boxing at full intensity at least once a week and am learning Muay Thai in Mexico City at 41. Full of energy and pain free.">Fundé Full Range para llevar a mi práctica el trabajo de Joe Hippensteel. Estudio y practico el método a diario, y lo explico en español para que cualquiera pueda entender qué le pasa a su cuerpo y qué hacer al respecto. Hoy entreno boxeo a toda intensidad por lo menos una vez a la semana y estoy aprendiendo Muay Thai en la Ciudad de México, a los 41. Con energía y sin dolor.</p>
+      <div class="bio-pics">
+        <img src="img/muaythai-2.jpg" width="1200" height="712" alt="Selfie de Olmo en un gimnasio de Muay Thai de la Ciudad de México, con alumnos practicando al fondo.">
+        <img src="img/muaythai-1.jpg" width="768" height="1000" alt="Olmo sentado en una silla de escritorio con shorts de Muay Thai, después de entrenar.">
+      </div>
+      <p class="bio-cap" data-es="Boxeo y Muay Thai, Ciudad de México." data-en="Boxing and Muay Thai, Mexico City.">Boxeo y Muay Thai, Ciudad de México.</p>
+      <div class="superq">
+        <span class="eyebrow" data-es="Supervisión directa" data-en="Direct supervision">Supervisión directa</span>
+        <blockquote data-es="Entrenado y supervisado por Joe Hippensteel y Mimi Ney. Cuando trabajas conmigo, ellos supervisan nuestro trabajo para asegurar el éxito." data-en="Trained and supervised by Joe Hippensteel and Mimi Ney. When you work with me, they oversee our work to ensure success.">Entrenado y supervisado por Joe Hippensteel y Mimi Ney. Cuando trabajas conmigo, ellos supervisan nuestro trabajo para asegurar el éxito.</blockquote>
+        <p class="who" data-es="Joe Hippensteel es el creador del método y director de Ultimate Human Performance; Mimi Ney es su vicepresidenta. Ambos firmaron mi certificación." data-en="Joe Hippensteel created the method and runs Ultimate Human Performance; Mimi Ney is its vice president. Both signed my certification.">Joe Hippensteel es el creador del método y director de Ultimate Human Performance; Mimi Ney es su vicepresidenta. Ambos firmaron mi certificación.</p>
+        <p class="seals" data-es="El método Hippensteel se usa para rehabilitar a atletas profesionales y a Navy SEALs de Estados Unidos. Tú recibes el mismo trabajo, con el mismo estándar." data-en="The Hippensteel Method is used to rehabilitate professional athletes and US Navy SEALs. You get the same work, to the same standard.">El método Hippensteel se usa para rehabilitar a atletas profesionales y a Navy SEALs de Estados Unidos. Tú recibes el mismo trabajo, con el mismo estándar.</p>
+      </div>
+    </div>
+    <img class="joe" src="img/joe-mimi.jpg" width="1600" height="1600" alt="Dos fotos: Olmo Araiza Woolrich sostiene su certificado entre Mimi Ney y Joe Hippensteel, al aire libre; y un retrato de Olmo con una playera de Ultimate Human Performance.">
+  </div>
+  <div class="two certrow">
+    <div class="cert">
+      <span class="eyebrow" style="margin:0" data-es="Certificación" data-en="Certification">Certificación</span>
+      <b>CPKE</b>
+      <span>Certified Physio/Kinesiologist · UHP Level 103</span>
+      <small data-es="Otorgada el 29 de octubre de 2026. Método Hippensteel®." data-en="Awarded October 29, 2026. Hippensteel Method®.">Otorgada el 29 de octubre de 2026. Método Hippensteel®.</small>
+      <small data-es="Firmado por Joseph B. Hippensteel (CEO) y Mimi Ney (V. P.), Ultimate Human Performance, Inc., Del Mar, California." data-en="Signed by Joseph B. Hippensteel (CEO) and Mimi Ney (V.P.), Ultimate Human Performance, Inc., Del Mar, California.">Firmado por Joseph B. Hippensteel (CEO) y Mimi Ney (V. P.), Ultimate Human Performance, Inc., Del Mar, California.</small>
+    </div>
+    <img class="diploma" src="img/certificado.jpg" width="1064" height="1400" alt="Certificado de Ultimate Human Performance, Inc.: Olmo Araiza Woolrich completó UHP Level 103, Certified Physio/Kinesiologist (CPKE), otorgado el 29 de octubre de 2026 y firmado por Joseph B. Hippensteel y Mimi Ney.">
+  </div>
+  </div>
+</section>
+
+
+<section class="band" id="contacto" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" data-es="Contacto" data-en="Contact">Contacto</span>
+      <h2 data-es="Empecemos por medirte" data-en="Let's start by measuring you">Empecemos por medirte</h2>
+      <p data-es="Escríbeme y acordamos día y lugar para tu primera sesión." data-en="Write to me and we will agree on a day and place for your first session.">Escríbeme y acordamos día y lugar para tu primera sesión.</p>
+    </div>
+    <div class="contact" style="color:var(--ink); border-color:var(--rule)">
+      <div style="border-color:var(--rule)"><span class="l" style="color:var(--gold)">Email</span><span class="val">olmo@fullrange.mx</span><button class="copy" type="button" data-copy="olmo@fullrange.mx" data-es="Copiar" data-en="Copy">Copiar</button></div>
+      <div style="border-color:var(--rule)"><span class="l" style="color:var(--gold)">Web</span><span class="val">fullrange.mx</span><button class="copy" type="button" data-copy="fullrange.mx" data-es="Copiar" data-en="Copy">Copiar</button></div>
+    </div>
+    <p class="note" style="color:var(--ink-soft)" data-es="CPKE es una certificación de Ultimate Human Performance. No es una licencia de fisioterapia ni sustituye la atención médica. Los resultados varían de persona a persona." data-en="CPKE is an Ultimate Human Performance certification. It is not a physiotherapy license and does not replace medical care. Results vary from person to person.">CPKE es una certificación de Ultimate Human Performance. No es una licencia de fisioterapia ni sustituye la atención médica. Los resultados varían de persona a persona.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer><span data-es="Full Range · Movimiento sin límites" data-en="Full Range · Movement without limits">Full Range · Movimiento sin límites</span><span data-es="Método Hippensteel® es una marca registrada de sus titulares." data-en="Hippensteel Method® is a registered mark of its owners.">Método Hippensteel® es una marca registrada de sus titulares.</span></footer>
+</div>
+
+<script>
+(function () {
+  var lang = "es";
+  function setLang(l) {
+    lang = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll("[data-es]").forEach(function (el) {
+      var t = el.getAttribute("data-" + l);
+      if (t != null) el.textContent = t;
+    });
+    document.querySelectorAll("[data-lang]").forEach(function (el) { el.hidden = el.getAttribute("data-lang") !== l; });
+    document.getElementById("b-es").setAttribute("aria-pressed", l === "es");
+    document.getElementById("b-en").setAttribute("aria-pressed", l === "en");
+  }
+  document.getElementById("b-es").onclick = function () { setLang("es"); };
+  document.getElementById("b-en").onclick = function () { setLang("en"); };
+  document.getElementById("b-th").onclick = function () {
+    var r = document.documentElement;
+    var dark = r.getAttribute("data-theme") === "dark" ||
+      (!r.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    r.setAttribute("data-theme", dark ? "light" : "dark");
+    paint();
+  };
+
+  /* Brush strokes, drawn like the card: a tapered gold arc over the top-left, a thinner navy arc down the right, and a gold + red sweep. */
+  var seed = 7;
+  function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function tok(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+  function brushArc(ctx, cx, cy, r, a0, a1, w, color) {
+    var n = 90, outer = [], inner = [], i, t, a, env, wd, jit;
+    for (i = 0; i <= n; i++) {
+      t = i / n; a = a0 + (a1 - a0) * t;
+      env = Math.pow(Math.sin(Math.PI * Math.pow(t, 0.55)), 0.8);
+      wd = w * env + 0.6;
+      jit = (rnd() - 0.5) * w * 0.05;
+      outer.push([cx + (r + wd / 2 + jit) * Math.cos(a), cy + (r + wd / 2 + jit) * Math.sin(a)]);
+      inner.push([cx + (r - wd / 2 + jit) * Math.cos(a), cy + (r - wd / 2 + jit) * Math.sin(a)]);
+    }
+    ctx.beginPath();
+    outer.forEach(function (p, k) { k ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); });
+    inner.reverse().forEach(function (p) { ctx.lineTo(p[0], p[1]); });
+    ctx.closePath(); ctx.fillStyle = color; ctx.fill();
+    /* dry-brush streaks */
+    ctx.save(); ctx.globalCompositeOperation = "destination-out";
+    for (i = 0; i < 14; i++) {
+      var off = (rnd() - 0.5) * w * 0.9, s0 = a0 + (a1 - a0) * rnd() * 0.7, len = (a1 - a0) * (0.1 + rnd() * 0.5);
+      ctx.beginPath(); ctx.arc(cx, cy, r + off, s0, Math.min(s0 + len, a1));
+      ctx.lineWidth = 0.6 + rnd() * 1.6; ctx.strokeStyle = "rgba(0,0,0," + (0.25 + rnd() * 0.5) + ")"; ctx.stroke();
+    }
+    ctx.restore();
+  }
+  function brushCurve(ctx, pts, w, color) {
+    /* pts: control points of a quadratic curve; tapered width */
+    var n = 80, L = [], R = [], i, t, x, y, dx, dy, m, env, wd;
+    for (i = 0; i <= n; i++) {
+      t = i / n;
+      x = (1 - t) * (1 - t) * pts[0] + 2 * (1 - t) * t * pts[2] + t * t * pts[4];
+      y = (1 - t) * (1 - t) * pts[1] + 2 * (1 - t) * t * pts[3] + t * t * pts[5];
+      dx = 2 * (1 - t) * (pts[2] - pts[0]) + 2 * t * (pts[4] - pts[2]);
+      dy = 2 * (1 - t) * (pts[3] - pts[1]) + 2 * t * (pts[5] - pts[3]);
+      m = Math.hypot(dx, dy) || 1; dx /= m; dy /= m;
+      env = Math.pow(Math.sin(Math.PI * Math.pow(t, 1.6)), 0.7);
+      wd = (w * env + 1) / 2 + (rnd() - 0.5) * w * 0.03;
+      L.push([x - dy * wd, y + dx * wd]); R.push([x + dy * wd, y - dx * wd]);
+    }
+    ctx.beginPath();
+    L.forEach(function (p, k) { k ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); });
+    R.reverse().forEach(function (p) { ctx.lineTo(p[0], p[1]); });
+    ctx.closePath(); ctx.fillStyle = color; ctx.fill();
+    ctx.save(); ctx.globalCompositeOperation = "destination-out";
+    for (i = 0; i < 18; i++) {
+      var k0 = Math.floor(rnd() * n * 0.6), k1 = Math.min(n, k0 + Math.floor(n * (0.15 + rnd() * 0.5))), f = rnd(), j;
+      ctx.beginPath();
+      for (j = k0; j <= k1; j++) { var p = [L[j][0] + (R[n - j][0] - L[j][0]) * f, L[j][1] + (R[n - j][1] - L[j][1]) * f]; j === k0 ? ctx.moveTo(p[0], p[1]) : ctx.lineTo(p[0], p[1]); }
+      ctx.lineWidth = 0.6 + rnd() * 1.8; ctx.strokeStyle = "rgba(0,0,0," + (0.3 + rnd() * 0.5) + ")"; ctx.stroke();
+    }
+    ctx.restore();
+  }
+  function paint() {
+    seed = 7;
+    var gold = tok("--gold-bright") || "#d9a441", ink = tok("--ink") || "#14213d", red = tok("--red") || "#8c1c13";
+    var c = document.getElementById("enso"), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var S = c.clientWidth || 400; c.width = S * dpr; c.height = S * dpr;
+    var ctx = c.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, S, S);
+    var cx = S / 2, cy = S / 2, r = S * 0.40, D = Math.PI / 180;
+    brushArc(ctx, cx, cy, r, 195 * D, 335 * D, S * 0.085, gold);    /* upper-left, thick */
+    brushArc(ctx, cx, cy, r * 0.99, -40 * D, 150 * D, S * 0.05, ink); /* right side, down and around */
+    brushArc(ctx, cx, cy, r * 1.06, 225 * D, 300 * D, S * 0.012, gold); /* thin flick */
+    var s = document.getElementById("sweep"), W = s.clientWidth || 800, H = s.clientHeight || 100;
+    s.width = W * dpr; s.height = H * dpr; var sx = s.getContext("2d"); sx.setTransform(dpr, 0, 0, dpr, 0, 0); sx.clearRect(0, 0, W, H);
+    brushCurve(sx, [-W * 0.02, H * 0.62, W * 0.5, H * 0.0, W * 1.03, H * 0.42], H * 0.34, gold);
+    brushCurve(sx, [-W * 0.02, H * 0.92, W * 0.55, H * 0.5, W * 1.03, H * 0.98], H * 0.4, red);
+  }
+  paint();
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(paint, 120); });
+  if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", paint);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(paint);
+  var rm = document.getElementById("readmore");
+  rm.onclick = function () {
+    var open = rm.getAttribute("aria-expanded") === "true";
+    document.querySelectorAll(".story .more").forEach(function (m) { m.hidden = open; });
+    rm.setAttribute("aria-expanded", !open);
+    rm.setAttribute("data-es", open ? "Seguir leyendo" : "Mostrar menos");
+    rm.setAttribute("data-en", open ? "Keep reading" : "Show less");
+    rm.textContent = rm.getAttribute("data-" + lang);
+    if (open) document.getElementById("historia").scrollIntoView({ behavior: "smooth" });
+  };
+  document.querySelectorAll(".copy").forEach(function (b) {
+    b.onclick = function () {
+      var txt = b.getAttribute("data-copy");
+      var done = function () {
+        var old = b.textContent;
+        b.textContent = lang === "es" ? "Copiado" : "Copied";
+        setTimeout(function () { b.textContent = lang === "es" ? "Copiar" : "Copy"; }, 1400);
+      };
+      var fallback = function () {
+        var v = b.parentNode.querySelector(".val");
+        var rg = document.createRange(); rg.selectNodeContents(v);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(rg);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, fallback);
+      } else fallback();
+    };
+  });
+})();
+</script>
+
+</body>
+</html>
