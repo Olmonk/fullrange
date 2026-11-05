@@ -65,9 +65,10 @@ a { color: inherit; }
 .bar nav a:hover { color: var(--red); }
 .ctl { display: flex; gap: 10px; align-items: center; }
 .lang { display: flex; border: 2px solid var(--ink); }
-.lang button { font: 600 0.9rem var(--f-body); letter-spacing: 0.06em; background: none; color: var(--ink); border: 0; padding: 10px 18px; cursor: pointer; min-width: 5.5rem; }
+.lang button { font: 600 0.9rem var(--f-body); letter-spacing: 0.06em; background: none; color: var(--ink); border: 0; padding: 9px 16px; cursor: pointer; min-width: 5.5rem; display: inline-flex; align-items: center; gap: 8px; }
+.lang button[aria-pressed="false"] .flag { opacity: 0.55; }
+.flag { width: 21px; height: 14px; display: block; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); flex: none; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
-.lang button[aria-pressed="true"]::before { content: "✓ "; color: var(--gold-bright); }
 #b-th { font: 600 1rem var(--f-body); background: none; color: var(--ink); border: 1px solid var(--rule); padding: 9px 12px; cursor: pointer; }
 
 /* hero */
@@ -212,7 +213,7 @@ footer { padding-block: 28px 40px; font-size: 0.8rem; color: var(--ink-soft); di
       <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
     </nav>
     <div class="ctl">
-      <div class="lang" role="group" aria-label="Idioma / Language"><button id="b-es" aria-pressed="true" type="button" lang="es">Español</button><button id="b-en" aria-pressed="false" type="button" lang="en">English</button></div>
+      <div class="lang" role="group" aria-label="Idioma / Language"><button id="b-es" aria-pressed="true" type="button" lang="es"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#006847"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ce1126"/><circle cx="15" cy="10" r="2.6" fill="#8c6a2d"/><circle cx="15" cy="10" r="1.2" fill="#006847"/></svg>Español</button><button id="b-en" aria-pressed="false" type="button" lang="en"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><g fill="#b22234"><rect y="0.00" width="30" height="1.54"/><rect y="3.08" width="30" height="1.54"/><rect y="6.15" width="30" height="1.54"/><rect y="9.23" width="30" height="1.54"/><rect y="12.31" width="30" height="1.54"/><rect y="15.38" width="30" height="1.54"/><rect y="18.46" width="30" height="1.54"/></g><rect width="12" height="10.77" fill="#3c3b6e"/><g fill="#fff"><circle cx="1.5" cy="1.4" r="0.55"/><circle cx="6.0" cy="1.4" r="0.55"/><circle cx="10.5" cy="1.4" r="0.55"/><circle cx="3.75" cy="3.6999999999999997" r="0.55"/><circle cx="8.25" cy="3.6999999999999997" r="0.55"/><circle cx="1.5" cy="6.0" r="0.55"/><circle cx="6.0" cy="6.0" r="0.55"/><circle cx="10.5" cy="6.0" r="0.55"/><circle cx="3.75" cy="8.299999999999999" r="0.55"/><circle cx="8.25" cy="8.299999999999999" r="0.55"/></g></svg>English</button></div>
       <button id="b-th" type="button" aria-label="Tema / Theme">◐</button>
     </div>
   </header>
